@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <!-- Existing Gradient Definitions -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B134D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#241663;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Existing Adire Pattern -->
+    <pattern id="adirePattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M0,30 L60,30 M30,0 L30,60" stroke="#FFD700" stroke-width="0.5" opacity="0.1">
+        <animate attributeName="stroke-dasharray" values="0,60;60,0;0,60" dur="4s" repeatCount="indefinite" />
+      </path>
+      <circle cx="30" cy="30" r="20" fill="none" stroke="#FFD700" stroke-width="0.5" opacity="0.2">
+        <animate attributeName="r" values="20;23;20" dur="3s" repeatCount="indefinite" />
+      </circle>
+    </pattern>
+
+    <!-- Existing Artist with Paintbrush -->
+    <g id="artist">
+      <path d="M0,0 C5,-10 15,-10 20,0 L18,30 C15,40 5,40 2,30 Z" fill="#FFD700" opacity="0.6">
+        <animate attributeName="d" 
+                 dur="3s"
+                 repeatCount="indefinite"
+                 values="M0,0 C5,-10 15,-10 20,0 L18,30 C15,40 5,40 2,30 Z;
+                        M0,0 C5,-12 15,-12 20,0 L18,32 C15,42 5,42 2,32 Z;
+                        M0,0 C5,-10 15,-10 20,0 L18,30 C15,40 5,40 2,30 Z" />
+      </path>
+    </g>
+
+    <!-- Existing Photographer -->
+    <g id="photographer">
+      <rect x="-15" y="-15" width="30" height="25" rx="5" fill="#4CAF50" opacity="0.7" />
+      <circle cx="0" cy="0" r="5" fill="#fff" opacity="0.9" />
+    </g>
+
+    <!-- Existing Digital Artist -->
+    <g id="digitalArtist">
+      <rect x="-20" y="-30" width="40" height="25" rx="3" fill="#FF5733" opacity="0.6" />
+      <path d="M-15,0 L15,0 M0,-10 L0,10" stroke="#fff" stroke-width="2" opacity="0.8" />
+    </g>
+
+    <!-- New: SDG Goal Text Paths -->
+    <path id="outerCircle" d="M600,100 A250,250 0 1,1 600,700 A250,250 0 1,1 600,100" fill="none"/>
+    <path id="innerCircle" d="M600,200 A150,150 0 1,0 600,600 A150,150 0 1,0 600,200" fill="none"/>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)" />
+  <rect width="100%" height="100%" fill="url(#adirePattern)" />
+
+  <!-- SDG Goals Text Animation -->
+  <g opacity="0.3">
+    <!-- Outer Circle Goals -->
+    <text fill="#FFD700" font-family="Arial" font-size="12">
+      <textPath href="#outerCircle" startOffset="0%">
+        1.No Poverty • 2.Zero Hunger • 3.Good Health • 4.Quality Education • 5.Gender Equality • 6.Clean Water • 7.Clean Energy • 8.Decent Work •
+        <animate attributeName="startOffset" from="0%" to="100%" dur="30s" repeatCount="indefinite"/>
+      </textPath>
+    </text>
+    <!-- Inner Circle Goals -->
+    <text fill="#4CAF50" font-family="Arial" font-size="12">
+      <textPath href="#innerCircle" startOffset="0%">
+        9.Industry • 10.Reduced Inequalities • 11.Sustainable Cities • 12.Responsible Consumption • 13.Climate Action • 14.Life Below Water • 15.Life on Land • 16.Peace • 17.Partnerships
+        <animate attributeName="startOffset" from="100%" to="0%" dur="25s" repeatCount="indefinite"/>
+      </textPath>
+    </text>
+  </g>
+
+  <!-- Existing Creative People Group -->
+  <g transform="translate(600,400)">
+    <!-- Artists -->
+    <use href="#artist" transform="translate(-200,-150) scale(2)">
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="-200,-150; -200,-155; -200,-150"
+        dur="2s"
+        repeatCount="indefinite"
+      />
+    </use>
+
+    <!-- Photographers -->
+    <use href="#photographer" transform="translate(150,-100) rotate(15)">
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        values="0;15;0"
+        dur="4s"
+        repeatCount="indefinite"
+        additive="sum"
+      />
+    </use>
+
+    <!-- Digital Artists -->
+    <use href="#digitalArtist" transform="translate(50,100)">
+      <animateTransform
+        attributeName="transform"
+        type="scale"
+        values="1;1.1;1"
+        dur="3s"
+        repeatCount="indefinite"
+        additive="sum"
+      />
+    </use>
+  </g>
+
+  <!-- Existing SDG Circles -->
+  <g>
+    <circle cx="300" cy="200" r="15" fill="none" stroke="#4CAF50" stroke-width="2">
+      <animate attributeName="r" values="15;18;15" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="500" cy="300" r="15" fill="none" stroke="#FFD700" stroke-width="2">
+      <animate attributeName="r" values="15;18;15" dur="2.2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="700" cy="400" r="15" fill="none" stroke="#FF5733" stroke-width="2">
+      <animate attributeName="r" values="15;18;15" dur="2.4s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Existing Traditional Instruments -->
+  <g transform="translate(200,600)">
+    <path d="M-30,-20 C-30,-40 30,-40 30,-20 L30,20 C30,40 -30,40 -30,20 Z" 
+          fill="#8B4513" stroke="#FFD700" stroke-width="2">
+      <animate
+        attributeName="d"
+        dur="2s"
+        repeatCount="indefinite"
+        values="M-30,-20 C-30,-40 30,-40 30,-20 L30,20 C30,40 -30,40 -30,20 Z;
+                M-32,-20 C-32,-45 32,-45 32,-20 L32,20 C32,45 -32,45 -32,20 Z;
+                M-30,-20 C-30,-40 30,-40 30,-20 L30,20 C30,40 -30,40 -30,20 Z"
+      />
+    </path>
+  </g>
+
+  <!-- Existing Floating Elements -->
+  <g>
+    <circle cx="100" cy="100" r="3" fill="#FFD700" opacity="0.4">
+      <animate attributeName="cy" values="100;120;100" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="900" cy="200" r="3" fill="#FFD700" opacity="0.4">
+      <animate attributeName="cy" values="200;220;200" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="300" cy="700" r="3" fill="#FFD700" opacity="0.4">
+      <animate attributeName="cy" values="700;720;700" dur="3.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Existing Creative Tools -->
+  <g transform="translate(900,200)">
+    <path d="M-20,-40 L20,-40 L0,40 Z" fill="#4CAF50" opacity="0.6">
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        values="0;360"
+        dur="10s"
+        repeatCount="indefinite"
+      />
+    </path>
+  </g>
+
+  <!-- New: Individual SDG Goal Icons -->
+  <g>
+    <!-- Add a few key SDG goals as individual floating elements -->
+    <g transform="translate(150,150)">
+      <text x="0" y="24" fill="#FFD700" font-size="14" opacity="0.4" text-anchor="middle">
+        No Poverty
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="0,0; 0,10; 0,0"
+          dur="3s"
+          repeatCount="indefinite"
+        />
+      </text>
+    </g>
+    <g transform="translate(850,250)">
+      <text x="0" y="0" fill="#4CAF50" font-size="14" opacity="0.4" text-anchor="middle">
+        Climate Action
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="0,0; 0,-10; 0,0"
+          dur="4s"
+          repeatCount="indefinite"
+        />
+      </text>
+    </g>
+    <g transform="translate(450,650)">
+      <text x="0" y="0" fill="#FF5733" font-size="14" opacity="0.4" text-anchor="middle">
+        Partnerships
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="0,0; 0,10; 0,0"
+          dur="3.5s"
+          repeatCount="indefinite"
+        />
+      </text>
+    </g>
+  </g>
+</svg>
