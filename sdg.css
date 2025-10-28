@@ -23,13 +23,21 @@ body {
   border-bottom: 1px solid #1e3a5f;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 9999;
 }
 
 .header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-label {
+  display: none;
 }
 
 .logo {
@@ -308,11 +316,52 @@ body {
 }
 
 @media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column;
+  .header .container {
+    flex-direction: grid;
+    grid-auto-columns: auto;
+    align-items: flex-start;
+    gap: 10px;
   }
 
   .nav ul {
+    flex-direction: column;
+    width: 100%;
     display: none;
+  }
+
+  .nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #1e3a5f;
+  }
+
+  .menu-label {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  #menu-toggle:checked + .menu-label + .nav ul {
+    display: flex;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text,
+  .hero-images {
+    width: 100%;
+  }
+
+  .hero-images {
+    justify-content: center;
+  }
+
+  .btn-register {
+    display: none !important;
   }
 }
