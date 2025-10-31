@@ -1,0 +1,86 @@
+.rootdiv{ 
+    width: 700px;
+    height: auto;
+    background-color: bisque;
+    margin: auto;
+}
+
+
+.header{ 
+    background-color: bisque;
+    height: auto;
+    text-align: center;
+}
+
+.body{
+    background-color: aliceblue;
+    height: auto;
+    padding: 10px;
+    font-size: medium;
+}
+
+    
+
+    .gov{ 
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        border-color: blue;
+        border-style: solid;
+        position: relative;
+    }
+
+    .name, .name1{
+        height: 5px;
+    }
+
+    /*gandp{
+        border-color: brown;
+        border-style: solid;
+    } */
+
+    .about{ 
+        background-color: beige;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: justify;
+    }
+
+    .skills{ 
+        background-color: beige;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+
+     .skillinner{ 
+        padding: 10px;
+    }
+
+    .diffskills{ 
+        background-color:cornflowerblue;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .pro{
+        background-color: beige;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .prof{ 
+        padding: 10px;
+    }
+
+
+
+    .footer{
+        background-color: bisque;
+    }
+
+.foot{ 
+    padding: 10px;
+    text-align: center;
+}
+   a{color: inherit;}

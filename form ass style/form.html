@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Registration</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <form id="registrationForm" class="form-container" action="#" method="post" autocomplete="on">
+    
+    <div> 
+      <nav class="nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="form.html">Form</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+<br><br>
+
+
+      <h2> Free Skills Training Registration: Front-End Web Development & Product Design </h2>
+      <p> <strong> Skill Afrika,</strong> In collaboration with the <strong> Office of the Special Adviser on SDGs to Osun State Government,</strong> is offering FREE Training in:</p>
+
+      <ul>
+        <li> Front-End Web Development</li>
+        <li> Product Design (UI/UX) </li>
+      </ul>
+      <p> This initiative is designed to empower young individuals with future-ready digital skills to thrive in today's job market. </p>
+      <p> Kindly fill out this short form to register your interest.</p>
+      <p> Only selected participants will be contacted. </p>
+      <p> Training is completely free.</p>
+      <hr>
+<br>
+      <strong> Registration Questions </strong>
+    </div>
+
+<br><br>
+    <div class="form-group">
+      <label for="fullName">Full name</label>
+      <input type="text" id="fullName" name="fullName" class="form-input" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone number (WhatsApp preferred)</label>
+      <input type="tel" id="phone" name="phone" class="form-input" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" id="email" name="email" class="form-input" required>
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" class="form-input" min="0" required>
+    </div>
+
+    <fieldset class="form-fieldset">
+      <legend>Gender</legend>
+      <label><input type="radio" name="gender" value="Male" class="form-radio" required> Male</label>
+      <label><input type="radio" name="gender" value="Female" class="form-radio"> Female</label>
+      <label><input type="radio" name="gender" value="Prefer not to say" class="form-radio"> Prefer not to say</label>
+    </fieldset>
+
+    <div class="form-group">
+      <label for="city">Residential Address (City/Town, LGA, State) </label>
+      <input type="text" id="city" name="city" class="form-input" required>
+    </div>
+
+
+    <fieldset class="form-fieldset">
+      <legend>Which course are you applying for?</legend>
+      <label><input type="radio" name="course" value="Front-End Web Development" class="form-radio" required> Front-End Web Development</label>
+      <br>
+      <label><input type="radio" name="course" value="Product Design (UI/UX)" class="form-radio"> Product Design (UI/UX)</label>
+      <br>
+    </fieldset>
+
+    <fieldset class="form-fieldset">
+      <legend>Do you have access to a computer? *</legend>
+      <label><input type="radio" name="computerAccess" value="Yes" class="form-radio" required> Yes</label>
+      <br>
+      <label><input type="radio" name="computerAccess" value="No" class="form-radio"> No</label>
+        <br>
+       <label><input type="radio" name="computerAccess" value="Sometimes" class="form-radio"> Sometimes</label>
+    </fieldset>
+
+    <div class="form-group">
+      <label for="why">Why are you interested in this Training *</label>
+      <textarea id="why" name="why" class="form-textarea" rows="4"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="occupation">Current Occupation / Status</label>
+     <select type="text" id="occupation" name="occupation" class="form-input" required>
+        <option value="" disabled selected>-- Select your status --</option>
+        <option value="student">Student</option>
+        <option value="nysc">NYSC Corp Member</option>
+        <option value="unemployed">Unemployed</option>
+        <option value="selfEmployed">Self employed</option>
+        <option value="employed">Employed</option>
+        <option value="other">Other</option>
+     </select>
+    </div>
+
+
+    <fieldset class="form-fieldset">
+      <legend>Preferred mode of learning</legend>
+      <label><input type="radio" name="modeLearning" value="Online" class="form-radio" required> Online</label>
+      <br>
+      <label><input type="radio" name="modeLearning" value="Physical" class="form-radio"> Physical</label>
+      <br>
+    </fieldset>
+
+    <fieldset class="form-fieldset">
+      <legend>Preferred class schedule</legend>
+      <label><input type="radio" name="classSchedule" value="Evening" class="form-radio" required> Evening</label>
+      <br>
+      <label><input type="radio" name="classSchedule" value="Weekend" class="form-radio"> Weekend</label>
+      <br>
+      <label><input type="radio" name="classSchedule" value="Daytime" class="form-radio"> Daytime</label>
+    </fieldset>
+
+    <div class="form-group">
+     <label for="referral">How did you hear about this opportunity?</label>
+     <select id="referral" name="referral" class="form-input" required>
+        <option value="" disabled selected>-- Select an option --</option>
+        <option value="whatsapp">WhatsApp</option>
+        <option value="instagram">Instagram</option>
+        <option value="twitter">Twitter (X)</option>
+        <option value="facebook">Facebook</option>
+        <option value="sdgOffice">SDG Office</option>
+        <option value="skillAfrika">Skill Afrika</option>
+        <option value="other">Other</option>
+     </select>
+    </div>
+
+
+    <div class="form-group checkbox-group">
+      <label>
+        <input type="checkbox" name="consent" id="consent" class="form-checkbox" required>
+        I confirm that the information provided is accurate.
+      </label>
+    </div>
+
+  
+    <div class="butt">
+      <button type="submit" id="submitBtn" class="form-button"> <a href="submit.html"> Submit</a> </button>
+      <button type="reset" class="clear"> Clear Form </button>
+    </div>
+
+   
+
+  </form>
+</body>
+</html>

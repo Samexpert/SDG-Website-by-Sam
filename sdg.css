@@ -91,6 +91,7 @@ body {
   background-image: url(./assets/imgi_35_hero-background.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 800px;
   padding: 80px 0;
   text-align: left;
   display: flex;
