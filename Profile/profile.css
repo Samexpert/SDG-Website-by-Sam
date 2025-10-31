@@ -19,7 +19,20 @@
     font-size: medium;
 }
 
-    
+    .nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.nav a {
+  color: #630000;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.3s;
+}
 
     .gov{ 
         height: 50px;
